@@ -1,0 +1,13 @@
+# Зависимости. Ставятся автоматически при деплое на Railway.
+# Локально: pip install -r requirements.txt
+
+python-telegram-bot>=21.0     # Telegram-бот
+anthropic>=0.42.0             # Claude API (мозг)
+supabase>=2.0.0               # база данных (память, рефлексии)
+apscheduler>=3.10.0           # расписание чекинов
+httpx>=0.27.0                 # HTTP-запросы (Google API и т.п.)
+python-dotenv>=1.0.0          # чтение .env
+fastapi>=0.115.0              # health-check + Google OAuth
+uvicorn>=0.34.0               # веб-сервер
+tzdata>=2024.1                # часовые пояса
+openai>=1.0.0                 # голосовые сообщения (опционально, Whisper)
