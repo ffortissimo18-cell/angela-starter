@@ -31,12 +31,16 @@ Each capability is an optional module you switch on by following a short lesson:
 | `docs/06-add-reminders.md` | ⏰ Reminders + weekly review |
 | `docs/07-build-your-own-tool.md` | 🛠 Write your own tool from scratch |
 
-## Quick start
+## Quick start — two ways
 
-You need three free/cheap things: a Telegram bot, a Claude API key, and a
-Supabase database. Then deploy to Railway in a few clicks.
+**With Claude Code (interactive):** clone or fork this repo, open it in
+[Claude Code](https://claude.ai/code), and type "начнём" (or "let's start").
+Claude reads `CLAUDE.md` and walks you through every step — asking your name,
+schedule, preferred tone, getting the API keys — and edits the files itself.
+No reading docs required.
 
-👉 **Start here: [`docs/01-setup.md`](docs/01-setup.md)** (≈30 minutes, no coding required)
+**Manual (read the lessons yourself):**
+👉 [`docs/01-setup.md`](docs/01-setup.md) (≈30 minutes, no coding required)
 
 Then make it speak in your voice: [`docs/02-make-it-yours.md`](docs/02-make-it-yours.md)
 
