@@ -8,7 +8,7 @@
 
 from datetime import date
 
-from assistant import db
+from assistant import db, notion_sync
 
 TOOLS = [
     {
@@ -65,22 +65,4 @@ def _save_reflection(data: dict) -> dict:
         main_focus=data.get("main_focus"),
         priorities=data.get("priorities"),
         energy=data.get("energy"),
-        mood=data.get("mood"),
-        win=data.get("win"),
-        insight=data.get("insight"),
-        gratitude=data.get("gratitude"),
-        day_rating=data.get("day_rating"),
-        notes=data.get("notes"),
-        ref_date=ref_date,
-    )
-    return {"saved": True, "time_of_day": data["time_of_day"]}
-
-
-def _get_reflections(data: dict) -> list[dict]:
-    return db.get_reflections(data.get("limit", 7), data.get("time_of_day"))
-
-
-HANDLERS = {
-    "save_reflection": _save_reflection,
-    "get_reflections": _get_reflections,
-}
+        mood=data.get("mo
