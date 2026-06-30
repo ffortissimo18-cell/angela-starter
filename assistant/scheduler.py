@@ -89,14 +89,14 @@ def create_scheduler() -> AsyncIOScheduler:
     # ── Ядро: утро и вечер по будням ──
     sched.add_job(
         _do_checkin,
-        CronTrigger(hour=config.MORNING_HOUR, minute=0, day_of_week="mon-fri",
+        CronTrigger(hour=config.MORNING_HOUR, minute=config.MORNING_MINUTE, day_of_week="mon-fri",
                     timezone=config.TIMEZONE),
         args=[prompts.MORNING_CHECKIN, "утренний"],
         id="morning", replace_existing=True,
     )
     sched.add_job(
         _do_checkin,
-        CronTrigger(hour=config.EVENING_HOUR, minute=0, day_of_week="mon-fri",
+        CronTrigger(hour=config.EVENING_HOUR, minute=config.EVENING_MINUTE, day_of_week="mon-fri",
                     timezone=config.TIMEZONE),
         args=[prompts.EVENING_CHECKIN, "вечерний"],
         id="evening", replace_existing=True,
